@@ -5,7 +5,7 @@ defmodule Nadia.Model.InputMessageContent do
              Nadia.Model.InputMessageContent.Contact.t
 
   defmodule Text do
-    defstruct message_text: nil, parse_mode: nil,
+    defstruct message_text: nil, parse_mode: "",
       disable_web_page_preview: false
     @type t :: %Text{message_text: binary, parse_mode: binary,
       disable_web_page_preview: atom}
@@ -18,13 +18,13 @@ defmodule Nadia.Model.InputMessageContent do
 
   defmodule Venue do
     defstruct latitude: nil, longitude: nil, title: nil, address: nil,
-      foursquare_id: nil
+      foursquare_id: ""
     @type t :: %Venue{latitude: float, longitude: float, title: binary,
       address: binary, foursquare_id: binary}
   end
 
   defmodule Contact do
-    defstruct phone_number: nil, first_name: nil, last_name: nil
+    defstruct phone_number: nil, first_name: nil, last_name: ""
     @type t :: %Contact{phone_number: binary, first_name: binary,
       last_name: binary}
   end
